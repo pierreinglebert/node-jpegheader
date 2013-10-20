@@ -1,0 +1,37 @@
+{
+  "author": "Pierre Inglebert",
+  "name": "jpegheader",
+  "description": "Parse header to get width/height/bits/components informations",
+  "version": "0.1.0",
+  "homepage": "https://github.com/pierreinglebert/node-jpegheader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierreinglebert/node-jpegheader.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "async": "~0.2.9",
+    "coffee-script": "~1.6.3"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "mocha": "~1.13.0",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
+    "grunt-env": "~0.4.0",
+    "grunt-exec": "~0.4.0",
+    "grunt-mocha-cli": "~1.0.5",
+    "covershot": "~0.2.0",
+    "grunt-coffee-coverage": "~0.1.1",
+    "coveralls": "~2.1",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-contrib-clean": "~0.5",
+    "matchdep": "~0.1.2"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/grunt test",
+    "coverage": "./node_modules/.bin/grunt coverage:travis"
+  }
+}
