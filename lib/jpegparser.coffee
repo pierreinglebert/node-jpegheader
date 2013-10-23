@@ -71,7 +71,7 @@ module.exports = class JpegHeaderParser
         self.readChar((err, char) ->
           # Must be a FF
           unless err
-            if char isnt 255
+            if char isnt 0xff
               next(new Error "Incorrect Frame Marker (FF)")
             else
               next err
