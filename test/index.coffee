@@ -68,4 +68,18 @@ describe('JpegHeaderParser', ->
       )
     )
   )
+
+  describe('getExif',->
+    it('should detect Grayscale 8 bit jfif jpeg', (done) ->
+      imagePath = path.join(__dirname, "fixtures/exif.jpg")
+      jpegParser = new JpegHeaderParser imagePath
+      jpegParser.getInfos((err, res) ->
+        assert.isNull err
+        assert.isObject res
+        assert.equal res.bits, 8
+        assert.equal res.components, 1
+        done()
+      )
+    )
+  )
 )
