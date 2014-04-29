@@ -16,7 +16,13 @@ module.exports = class JpegHeaderParser
           cb err
         else
           @fd = fd
-          @examine(cb)
+          @examine((err, infos) ->
+            fs.close(fd, (error) ->
+              unless err?
+                err = error
+              cb(err,infos)
+            )
+          )
       )
 
   examine: (done)->

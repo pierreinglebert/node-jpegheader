@@ -2,7 +2,7 @@
   "author": "Pierre Inglebert",
   "name": "jpegheader",
   "description": "Parse header to get width/height/bits/components informations",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/pierreinglebert/node-jpegheader",
   "repository": {
     "type": "git",
